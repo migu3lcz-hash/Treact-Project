@@ -823,22 +823,18 @@ TESTEMONIALS
     background: none;
     cursor: no-drop;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(211, 211, 211);
+    padding: 12px;
+    margin: 0 16px;
+    border-radius: 50%;
 }
 
 .review__arrows {
     display: flex;
 }
 
-.review__arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 0 16px;
-    background: rgb(221, 221, 221);
-    padding: 12px 18px 12px 18px;
-    border-radius: 50%;
-}
 
 /* 
 
