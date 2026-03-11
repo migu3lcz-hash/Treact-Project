@@ -503,6 +503,10 @@ QUALITY
     cursor: pointer;
 }
 
+.quality__btn:hover {
+    background-color: #5314c9;
+}
+
 .quality__img--container {
     width: 50%;
 }
@@ -752,6 +756,12 @@ PRICING
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pricing__enterprise--btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pricing__business {
@@ -910,6 +920,12 @@ PRICING
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pricing__btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 
@@ -1108,6 +1124,7 @@ footer {
 }
 
 .footer__li {
+    position: relative;
     text-decoration: none;
     color: white;
 }
@@ -1115,10 +1132,24 @@ footer {
 .footer__link {
     padding: 8px 0;
     font-size: 16px;
+    text-decoration: none;
 }
 
-.footer__link:hover {
-    text-decoration: underline;
+.footer__li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.footer__li:hover::after, .footer__li:focus::after {
+    opacity: 1;
 }
 
 .footer__cont {
